@@ -1,0 +1,8 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Mojolicious/Plugin/ToolkitRenderer.pm
+t/library.t
+t/manifest.t
+t/pod.t
