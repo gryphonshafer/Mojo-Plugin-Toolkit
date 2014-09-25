@@ -1,8 +1,11 @@
 Changes
-MANIFEST
-Makefile.PL
-README
 lib/Mojolicious/Plugin/ToolkitRenderer.pm
+LICENSE
+Makefile.PL
+MANIFEST
+README.md
+t/00-load.t
 t/library.t
 t/manifest.t
+t/pod-coverage.t
 t/pod.t
