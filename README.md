@@ -4,8 +4,8 @@ This module is a Mojolicious plugin for easy use of L<Template> Toolkit. It
 adds a "tt" handler and provides a "render_tt" helper method. It allows for
 inline TT and all the usual L<Template> complexities.
 
-[![Build Status](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer.svg)](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer/badge.png)](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+[![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
 
 ## Installation
 
