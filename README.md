@@ -4,7 +4,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 # VERSION
 
-version 1.03
+version 1.04
 
 [![Build Status](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer.svg)](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
 [![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer/badge.png)](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
