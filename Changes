@@ -1,7 +1,10 @@
 Revision history for Mojolicious::Plugin::ToolkitRenderer
 
-1.01    Mon Aug  5 12:47:03 PDT 2013
-        First version, released on an unsuspecting world.
+{{$NEXT}}
+        - Implementing use of Dist::Zilla
 
-1.02    Wed Sep 25 10:00:58 PDT 2014
-        Some OCD cleanup; addition of Travis and Coveralls.
+1.02      Wed Sep 25 10:00:58 PDT 2014
+        - Some OCD cleanup; addition of Travis and Coveralls
+
+1.01      Mon Aug  5 12:47:03 PDT 2013
+        - First version, released on an unsuspecting world

@@ -1,4 +1,6 @@
 package Mojolicious::Plugin::ToolkitRenderer;
+# ABSTRACT: Template Toolkit Renderer Mojolicious Plugin
+
 use strict;
 use warnings;
 
@@ -6,7 +8,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::Exception;
 use Template ();
 
-our $VERSION = '1.02';
+# VERSION
 
 sub register {
     my ( $self, $app, $settings ) = @_;
@@ -64,12 +66,24 @@ sub register {
 }
 
 1;
+__END__
 
 =pod
 
-=head1 NAME
+=begin :badges
 
-Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plugin
+=for markdown
+[![Build Status](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer.svg)](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer/badge.png)](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+
+=end :badges
+
+=begin :prelude
+
+=for test_synopsis
+my($self);
+
+=end :prelude
 
 =head1 SYNOPSIS
 
@@ -84,7 +98,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
             config => {
                 RELATIVE  => 1,
                 EVAL_PERL => 0,
-                FILTERS   => { ucfirst => sub { return ucfirst shift },
+                FILTERS   => { ucfirst => sub { return ucfirst shift } },
                 ENCODING  => 'utf8',
             },
             context => sub {
@@ -95,7 +109,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
     $self->renderer->default_handler('tt');
 
     # Mojolicious::Lite
-    plugin ToolkitRenderer => {
+    plugin( ToolkitRenderer => {
         settings => {
             inline_template => 'inline',
             controller      => 'c',
@@ -103,13 +117,13 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
         config => {
             RELATIVE  => 1,
             EVAL_PERL => 0,
-            FILTERS   => { ucfirst => sub { return ucfirst shift },
+            FILTERS   => { ucfirst => sub { return ucfirst shift } },
             ENCODING  => 'utf8',
         },
         context => sub {
             shift->define_vmethod( 'scalar', 'upper', sub { return uc shift } );
         },
-    };
+    } );
 
 =head1 DESCRIPTION
 
@@ -184,15 +198,14 @@ require TT's context.
 
 L<Mojolicious>, L<Mojolicious::Plugin>, L<Template>.
 
-=head1 AUTHOR
+You can also look for additional information at:
 
-Gryphon Shafer E<lt>gryphon@cpan.orgE<gt>.
-
-    code('Perl') || die;
-
-=head1 LICENSE
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=for :list
+* L<GitHub|https://github.com/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
+* L<CPAN|http://search.cpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
+* L<MetaCPAN|https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer>
+* L<AnnoCPAN|http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
+* L<Travis CI|https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
+* L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
 
 =cut
