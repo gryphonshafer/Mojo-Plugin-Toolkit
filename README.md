@@ -4,10 +4,10 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 # VERSION
 
-version 1.04
+version 1.05
 
-[![Build Status](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer.svg)](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer/badge.png)](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+[![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
 
 # SYNOPSIS
 
@@ -124,12 +124,12 @@ require TT's context.
 
 You can also look for additional information at:
 
-- [GitHub](https://github.com/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+- [GitHub](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit)
 - [CPAN](http://search.cpan.org/dist/Mojolicious-Plugin-ToolkitRenderer)
 - [MetaCPAN](https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer)
 - [AnnoCPAN](http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer)
-- [Travis CI](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
-- [Coveralls](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+- [Travis CI](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
+- [Coveralls](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
 
 # AUTHOR
 

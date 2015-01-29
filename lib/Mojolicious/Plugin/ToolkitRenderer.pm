@@ -73,8 +73,8 @@ __END__
 =begin :badges
 
 =for markdown
-[![Build Status](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer.svg)](https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer/badge.png)](https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer)
+[![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
+[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
 
 =end :badges
 
@@ -201,11 +201,11 @@ L<Mojolicious>, L<Mojolicious::Plugin>, L<Template>.
 You can also look for additional information at:
 
 =for :list
-* L<GitHub|https://github.com/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
+* L<GitHub|https://github.com/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<CPAN|http://search.cpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
 * L<MetaCPAN|https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer>
 * L<AnnoCPAN|http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
-* L<Travis CI|https://travis-ci.org/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
-* L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojolicious-Plugin-ToolkitRenderer>
+* L<Travis CI|https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit>
+* L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit>
 
 =cut
