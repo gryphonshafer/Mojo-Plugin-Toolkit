@@ -207,5 +207,7 @@ You can also look for additional information at:
 * L<AnnoCPAN|http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
 * L<Travis CI|https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit>
+* L<CPANTS|http://cpants.cpanauthors.org/dist/Mojo-Plugin-Toolkit>
+* L<CPAN Testers|http://www.cpantesters.org/distro/M/Mojo-Plugin-Toolkit.html>
 
 =cut
