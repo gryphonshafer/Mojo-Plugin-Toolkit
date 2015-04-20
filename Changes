@@ -1,6 +1,8 @@
 Revision history for Mojolicious::Plugin::ToolkitRenderer
 
 {{$NEXT}}
+
+1.06      2015-04-20 14:26:58-07:00 America/Los_Angeles
         - Switch render_exception to reply->exception (Mojo deprecated old sub)
 
 1.05      2015-01-29 15:30:18-08:00 America/Los_Angeles
