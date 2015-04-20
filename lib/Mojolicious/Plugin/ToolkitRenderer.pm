@@ -41,7 +41,7 @@ sub register {
                 my $default_handler = $renderer->default_handler;
                 $renderer->default_handler('ep');
 
-                $controller->render_exception(
+                $controller->reply->exception(
                     Mojo::Exception->new( __PACKAGE__ . ' - ' . $template->error || '' )
                 );
 

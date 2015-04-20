@@ -1,6 +1,7 @@
 Revision history for Mojolicious::Plugin::ToolkitRenderer
 
 {{$NEXT}}
+        - Switch render_exception to reply->exception (Mojo deprecated old sub)
 
 1.05      2015-01-29 15:30:18-08:00 America/Los_Angeles
         - Fix for documentation bug (wrong URLs)
