@@ -2,6 +2,7 @@
 /.build/
 _build/
 cover_db/
+.prove
 inc/
 Build
 !Build/

@@ -26,7 +26,11 @@ sub register {
 
         $template->process(
             ( ( $options->{$inline} ) ? \$options->{$inline} : $renderer->template_name($options) ),
-            { %{ $controller->stash }, ( $settings->{'settings'}{'controller'} || 'c' ) => $controller },
+            {
+                'content' => $controller->content,
+                %{ $controller->stash },
+                ( $settings->{'settings'}{'controller'} || 'c' ) => $controller,
+            },
             $output,
         ) || do {
             $app->log->error( $template->error );
