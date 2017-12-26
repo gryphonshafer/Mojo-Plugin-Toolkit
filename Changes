@@ -1,6 +1,7 @@
 Revision history for Mojolicious::Plugin::ToolkitRenderer
 
 {{$NEXT}}
+        - Adding Perl versions to test; annual general update for 2018
 
 1.07      2015-11-30 12:52:05-08:00 America/Los_Angeles
         - Add "content" keyword into stash as default controller->content
