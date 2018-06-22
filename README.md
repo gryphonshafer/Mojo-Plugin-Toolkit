@@ -11,7 +11,11 @@ version 1.08
 
 # SYNOPSIS
 
-    # Mojolicious
+    # Simple Mojolicious
+    $self->plugin('ToolkitRenderer');
+    $self->renderer->default_handler('tt');
+
+    # Customized Mojolicious
     $self->plugin(
         'ToolkitRenderer',
         {
@@ -20,10 +24,11 @@ version 1.08
                 controller      => 'c',
             },
             config => {
-                RELATIVE  => 1,
-                EVAL_PERL => 0,
-                FILTERS   => { ucfirst => sub { return ucfirst shift } },
-                ENCODING  => 'utf8',
+                RELATIVE     => 1,
+                EVAL_PERL    => 0,
+                FILTERS      => { ucfirst => sub { return ucfirst shift } },
+                ENCODING     => 'utf8',
+                INCLUDE_PATH => $self->renderer->paths,
             },
             context => sub {
                 shift->define_vmethod( 'scalar', 'upper', sub { return uc shift } );
@@ -100,12 +105,25 @@ page and logs). But you can override this.
     error_handler => sub {
         my ( $controller, $renderer, $app ) = @_;
 
-        my $default_handler = $renderer->default_handler;
-        $renderer->default_handler('ep');
-        $controller->render_exception( Mojo::Exception->new( $template->error ) );
-        $renderer->default_handler($default_handler);
+        unless (
+            $template->error and (
+                $template->error eq 'file error - exception.html.tt: not found' or
+                $template->error eq 'file error - exception.' . $app->mode . '.html.tt: not found'
+            )
+        ) {
+            my $default_handler = $renderer->default_handler;
+            $renderer->default_handler('ep');
 
-        $controller->rendered(500);
+            $controller->reply->exception(
+                Mojo::Exception->new( __PACKAGE__ . ' - ' . $template->error )
+            );
+
+            $controller->rendered(
+                ( $template->error and $template->error =~ /not found/ ) ? 404 : 500
+            );
+
+            $renderer->default_handler($default_handler);
+        }
     }
 
 ## context
