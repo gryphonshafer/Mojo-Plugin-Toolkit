@@ -231,9 +231,7 @@ You can also look for additional information at:
 
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/Mojo-Plugin-Toolkit>
-* L<CPAN|http://search.cpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
 * L<MetaCPAN|https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer>
-* L<AnnoCPAN|http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer>
 * L<Travis CI|https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/Mojo-Plugin-Toolkit>
