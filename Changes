@@ -2,6 +2,8 @@ Revision history for Mojolicious::Plugin::ToolkitRenderer
 
 {{$NEXT}}
         - Update Travis YAML
+        - Update module code style
+        - Simpler handling of TT errors in Mojo
 
 1.08      2018-06-22 16:34:14-07:00 America/Los_Angeles
         - Adding Perl versions to test; annual general update for 2018

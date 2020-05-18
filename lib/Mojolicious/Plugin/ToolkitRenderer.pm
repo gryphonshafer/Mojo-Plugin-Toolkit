@@ -14,32 +14,29 @@ use Template ();
 sub register {
     my ( $self, $app, $settings ) = @_;
 
-    $settings->{'config'}{'RELATIVE'}     //= 1;
-    $settings->{'config'}{'EVAL_PERL'}    //= 0;
-    $settings->{'config'}{'INCLUDE_PATH'} //= $app->renderer->paths;
+    $settings->{config}{RELATIVE}     //= 1;
+    $settings->{config}{EVAL_PERL}    //= 0;
+    $settings->{config}{INCLUDE_PATH} //= $app->renderer->paths;
 
-    my $template = Template->new( $settings->{'config'} );
+    my $template = Template->new( $settings->{config} );
 
-    $settings->{'context'}->( $template->context ) if ( $settings->{'context'} );
+    $settings->{context}->( $template->context ) if ( $settings->{context} );
 
-    $app->renderer->add_handler( 'tt' => sub {
+    $app->renderer->add_handler( tt => sub {
         my ( $renderer, $controller, $output, $options ) = @_;
-        my $inline = $settings->{'settings'}{'inline_template'} || 'inline';
+        my $inline = $settings->{settings}{inline_template} || 'inline';
 
         $template->process(
             ( ( $options->{$inline} ) ? \$options->{$inline} : $renderer->template_name($options) ),
             {
-                'content' => $controller->content,
+                content => $controller->content,
                 %{ $controller->stash },
-                ( $settings->{'settings'}{'controller'} || 'c' ) => $controller,
+                ( $settings->{settings}{controller} || 'c' ) => $controller,
             },
             $output,
         ) || do {
-            if (
-                $app->mode ne 'development' and
-                ref( $settings->{'settings'}{'error_handler'} ) eq 'CODE'
-            ) {
-                $settings->{'settings'}{'error_handler'}->( $controller, $renderer, $app );
+            if ( ref( $settings->{settings}{error_handler} ) eq 'CODE' ) {
+                $settings->{settings}{error_handler}->( $controller, $renderer, $app, $template );
             }
             else {
                 unless (
@@ -48,18 +45,13 @@ sub register {
                         $template->error eq 'file error - exception.' . $app->mode . '.html.tt: not found'
                     )
                 ) {
-                    my $default_handler = $renderer->default_handler;
-                    $renderer->default_handler('ep');
+                    $$output = $template->error;
+                    $controller->res->headers->content_type('text/plain');
 
-                    $controller->reply->exception(
-                        Mojo::Exception->new( __PACKAGE__ . ' - ' . $template->error )
-                    );
-
+                    $controller->log->error( $template->error );
                     $controller->rendered(
                         ( $template->error and $template->error =~ /not found/ ) ? 404 : 500
                     );
-
-                    $renderer->default_handler($default_handler);
                 }
             }
         };
@@ -68,8 +60,8 @@ sub register {
     } );
 
     $app->helper(
-        'render_tt' => sub {
-            shift->render( 'handler' => 'tt', @_ );
+        render_tt => sub {
+            shift->render( handler => 'tt', @_ );
         }
     );
 
@@ -185,12 +177,10 @@ The "controller" settings lets your defined what keyword you can use within your
 TT templates that will be a reference to the Mojolicious controller.
 
 The "error_handler" setting lets you provide an optional subroutine reference
-that will get called if there is any TT errors. By default, when in development
-mode, TT errors will surface in the normal Mojolicious helpful way (browser
-page and logs). But you can override this.
+that will get called if there is any TT errors.
 
     error_handler => sub {
-        my ( $controller, $renderer, $app ) = @_;
+        my ( $controller, $renderer, $app, $template ) = @_;
 
         unless (
             $template->error and (
@@ -198,18 +188,13 @@ page and logs). But you can override this.
                 $template->error eq 'file error - exception.' . $app->mode . '.html.tt: not found'
             )
         ) {
-            my $default_handler = $renderer->default_handler;
-            $renderer->default_handler('ep');
+            $$output = $template->error;
+            $controller->res->headers->content_type('text/plain');
 
-            $controller->reply->exception(
-                Mojo::Exception->new( __PACKAGE__ . ' - ' . $template->error )
-            );
-
+            $controller->log->error( $template->error );
             $controller->rendered(
                 ( $template->error and $template->error =~ /not found/ ) ? 404 : 500
             );
-
-            $renderer->default_handler($default_handler);
         }
     }
 

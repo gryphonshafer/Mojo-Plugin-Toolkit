@@ -4,7 +4,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 # VERSION
 
-version 1.08
+version 1.09
 
 [![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
 [![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
@@ -98,12 +98,10 @@ The "controller" settings lets your defined what keyword you can use within your
 TT templates that will be a reference to the Mojolicious controller.
 
 The "error\_handler" setting lets you provide an optional subroutine reference
-that will get called if there is any TT errors. By default, when in development
-mode, TT errors will surface in the normal Mojolicious helpful way (browser
-page and logs). But you can override this.
+that will get called if there is any TT errors.
 
     error_handler => sub {
-        my ( $controller, $renderer, $app ) = @_;
+        my ( $controller, $renderer, $app, $template ) = @_;
 
         unless (
             $template->error and (
@@ -111,18 +109,13 @@ page and logs). But you can override this.
                 $template->error eq 'file error - exception.' . $app->mode . '.html.tt: not found'
             )
         ) {
-            my $default_handler = $renderer->default_handler;
-            $renderer->default_handler('ep');
+            $$output = $template->error;
+            $controller->res->headers->content_type('text/plain');
 
-            $controller->reply->exception(
-                Mojo::Exception->new( __PACKAGE__ . ' - ' . $template->error )
-            );
-
+            $controller->log->error( $template->error );
             $controller->rendered(
                 ( $template->error and $template->error =~ /not found/ ) ? 404 : 500
             );
-
-            $renderer->default_handler($default_handler);
         }
     }
 
@@ -138,14 +131,12 @@ require TT's context.
 
 # SEE ALSO
 
-[Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Plugin](https://metacpan.org/pod/Mojolicious::Plugin), [Template](https://metacpan.org/pod/Template).
+[Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Plugin](https://metacpan.org/pod/Mojolicious%3A%3APlugin), [Template](https://metacpan.org/pod/Template).
 
 You can also look for additional information at:
 
 - [GitHub](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit)
-- [CPAN](http://search.cpan.org/dist/Mojolicious-Plugin-ToolkitRenderer)
 - [MetaCPAN](https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer)
-- [AnnoCPAN](http://annocpan.org/dist/Mojolicious-Plugin-ToolkitRenderer)
 - [Travis CI](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
 - [Coveralls](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
 - [CPANTS](http://cpants.cpanauthors.org/dist/Mojo-Plugin-Toolkit)
@@ -157,7 +148,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2018 by Gryphon Shafer.
+This software is copyright (c) 2020 by Gryphon Shafer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
