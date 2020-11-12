@@ -4,10 +4,10 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 # VERSION
 
-version 1.09
+version 1.10
 
-[![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
+[![build](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/workflows/build/badge.svg)](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit)
 
 # SYNOPSIS
 
@@ -137,8 +137,8 @@ You can also look for additional information at:
 
 - [GitHub](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit)
 - [MetaCPAN](https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer)
-- [Travis CI](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
-- [Coveralls](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
+- [GitHub Actions](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions)
+- [Codecov](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit)
 - [CPANTS](http://cpants.cpanauthors.org/dist/Mojo-Plugin-Toolkit)
 - [CPAN Testers](http://www.cpantesters.org/distro/M/Mojo-Plugin-Toolkit.html)
 
@@ -148,7 +148,7 @@ Gryphon Shafer <gryphon@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2020 by Gryphon Shafer.
+This software is copyright (c) 2021 by Gryphon Shafer.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
