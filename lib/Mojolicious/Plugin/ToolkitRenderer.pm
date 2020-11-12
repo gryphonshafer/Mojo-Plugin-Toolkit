@@ -76,8 +76,8 @@ __END__
 =begin :badges
 
 =for markdown
-[![Build Status](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit.svg)](https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit)
-[![Coverage Status](https://coveralls.io/repos/gryphonshafer/Mojo-Plugin-Toolkit/badge.png)](https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit)
+[![build](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/workflows/build/badge.svg)](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions?query=workflow%3Abuild)
+[![codecov](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit)
 
 =end :badges
 
@@ -217,8 +217,8 @@ You can also look for additional information at:
 =for :list
 * L<GitHub|https://github.com/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<MetaCPAN|https://metacpan.org/pod/Mojolicious::Plugin::ToolkitRenderer>
-* L<Travis CI|https://travis-ci.org/gryphonshafer/Mojo-Plugin-Toolkit>
-* L<Coveralls|https://coveralls.io/r/gryphonshafer/Mojo-Plugin-Toolkit>
+* L<GitHub Actions|https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions>
+* L<Codecov|https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit>
 * L<CPANTS|http://cpants.cpanauthors.org/dist/Mojo-Plugin-Toolkit>
 * L<CPAN Testers|http://www.cpantesters.org/distro/M/Mojo-Plugin-Toolkit.html>
 
