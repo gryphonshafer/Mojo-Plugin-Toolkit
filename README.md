@@ -6,7 +6,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 version 1.10
 
-[![build](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/workflows/build/badge.svg)](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions?query=workflow%3Abuild)
+[![test](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/workflows/test/badge.svg)](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit)
 
 # SYNOPSIS
