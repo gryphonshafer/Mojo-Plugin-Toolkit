@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Mojolicious-Plugin-ToolkitRenderer",
-  "LICENSE" => "perl",
+  "LICENSE" => "artistic_2",
   "MIN_PERL_VERSION" => "5.010",
   "NAME" => "Mojolicious::Plugin::ToolkitRenderer",
   "PREREQ_PM" => {
