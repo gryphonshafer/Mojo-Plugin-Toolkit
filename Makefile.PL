@@ -28,9 +28,9 @@ my %WriteMakefileArgs = (
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Mojolicious::Lite" => 0,
-    "Test::Mojo" => 0,
-    "Test::More" => 0,
-    "Test::Most" => 0
+    "Test2::MojoX" => 0,
+    "Test2::V0" => 0,
+    "Test::More" => 0
   },
   "VERSION" => "1.10",
   "test" => {
@@ -47,9 +47,9 @@ my %FallbackPrereqs = (
   "Mojo::Exception" => 0,
   "Mojolicious::Lite" => 0,
   "Template" => 0,
-  "Test::Mojo" => 0,
+  "Test2::MojoX" => 0,
+  "Test2::V0" => 0,
   "Test::More" => 0,
-  "Test::Most" => 0,
   "strict" => 0,
   "warnings" => 0
 );
