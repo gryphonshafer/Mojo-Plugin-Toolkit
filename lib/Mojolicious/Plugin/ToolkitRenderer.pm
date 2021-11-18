@@ -7,7 +7,12 @@ use warnings;
 
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::Exception;
-use Template ();
+
+BEGIN {
+    local $SIG{__WARN__} = sub {};
+    require Template;
+    Template->import;
+}
 
 # VERSION
 
