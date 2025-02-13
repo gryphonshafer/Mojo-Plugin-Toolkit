@@ -1,7 +1,7 @@
 package Mojolicious::Plugin::ToolkitRenderer;
 # ABSTRACT: Template Toolkit Renderer Mojolicious Plugin
 
-use 5.010;
+use 5.016;
 use strict;
 use warnings;
 
