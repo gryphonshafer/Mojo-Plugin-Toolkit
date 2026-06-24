@@ -4,7 +4,7 @@ Mojolicious::Plugin::ToolkitRenderer - Template Toolkit Renderer Mojolicious Plu
 
 # VERSION
 
-version 1.14
+version 1.15
 
 [![test](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/workflows/test/badge.svg)](https://github.com/gryphonshafer/Mojo-Plugin-Toolkit/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit/graph/badge.svg)](https://codecov.io/gh/gryphonshafer/Mojo-Plugin-Toolkit)
@@ -144,7 +144,7 @@ You can also look for additional information at:
 
 # AUTHOR
 
-Gryphon Shafer <gryphon@cpan.org>
+Gryphon Shafer <gryphon@goldenguru.com>
 
 # COPYRIGHT AND LICENSE
 
